@@ -1,0 +1,110 @@
+##############################################################
+#  Создание проекта с нуля
+##############################################################
+
+# Установить NodeJs
+  https://nodejs.org
+
+# Установить Angular
+  npm install @angular/cli
+
+# Установить PrimeNG
+  npm install primeng --save
+  npm install primeicons --save
+  npm install font-awesome --save
+  npm install @angular/cdk --save
+  
+# Если нужно поменять тему!
+  angular.json -> styles
+  "./node_modules/primeicons/primeicons.css",
+  "./node_modules/primeng/resources/themes/fluent-light/theme.css",
+  "./node_modules/primeng/resources/primeng.min.css",
+  
+  
+# Создать новый проект в текущей папке (предварительно удалить package.json и package-lock.json)
+  ng new front-app --routing --style=scss --directory ./
+
+
+# Добавить в файл ".gitignore":
+
+# IDE
+/.vscode
+/.idea
+/.angular
+
+
+# Установить Google-Fonts "angular.json" добавить:
+          "assets": [
+                  "src/favicon.ico",
+                  "src/assets",
+                  "src/assets/fonts"
+                ],
+
+  
+##############################################################
+# Действия после клонирования
+##############################################################
+
+# Если нужно обновить все пакеты для существующего проекта в package.json
+  npm i -g npm-check-updates
+  npm fund
+  ncu -u
+
+# Установить пакеты
+  npm install
+
+# Если есть ошибка "fix the upstream dependency conflict or retry npm err..."
+  npm config set legacy-peer-deps true  
+
+# Если ошибка: "Так как выполнение сценариев отключено в этой системе. Для получения дополнительных сведений см..."
+  PowerShell Admin: Set-ExecutionPolicy RemoteSigned
+
+
+##############################################################
+# Полезные команды
+##############################################################
+
+# New component
+  ng generate component xyz
+
+# Angular Material
+  ng add @angular/material
+
+# Add PWA Support
+  ng add @angular/pwa
+  
+# Add Dependency
+  ng add _____
+
+# Run and watch tests
+  ng test
+
+# Build for production
+  ng build
+
+
+##############################################################
+# Основные материалы для изучения
+##############################################################
+  
+# Angular
+  https://angular.io/tutorial
+  
+# CLI
+  https://angular.io/cli
+  
+# Material
+  https://material.angular.io/
+  
+# Blog
+  https://blog.angular.io/
+  
+# Devtools
+  https://angular.io/guide/devtools
+
+
+##############################################################
+# Полезные примеры
+##############################################################
+
+https://stackblitz.com/angular/gqgalmavnrd?file=src%2Fapp%2Fproduct-alerts%2Fproduct-alerts.component.ts
