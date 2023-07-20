@@ -3,3 +3,4 @@
 ##############################################################
 
   ng generate module modules/todo --module=app --routing
+    ng generate component modules/todo/pages/list --module=modules/todo
