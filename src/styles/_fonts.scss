@@ -1,0 +1,65 @@
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+// Подключение шрифтов
+// https://moguta.ru/blog/delaem-internet-magazin-vmeste/kak-podklyuchit-shrift-na-sajt-v-css
+// Конвертер https://cloudconvert.com/
+
+// Нормальный шрифт
+@font-face {
+  font-family: "Inter-Normal"; 
+  src: url("/assets/fonts/Inter/Inter-Regular.eot"); 
+  src: url("/assets/fonts/Inter/Inter-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/assets/fonts/Inter/Inter-Regular.woff") format("woff"), /* Modern Browsers */
+  url("/assets/fonts/Inter/Inter-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+  url("/assets/fonts/Inter/Inter-Regular.svg#svgFontName") format('svg'); /* Legacy iOS */
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+// Средний шрифт
+@font-face {
+  font-family: "Inter-Medium"; 
+  src: url("/assets/fonts/Inter/Inter-Medium.eot"); 
+  src: url("/assets/fonts/Inter/Inter-Medium.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/assets/fonts/Inter/Inter-Medium.woff") format("woff"), /* Modern Browsers */
+  url("/assets/fonts/Inter/Inter-Medium.ttf") format("truetype"), /* Safari, Android, iOS */
+  url("/assets/fonts/Inter/Inter-Medium.svg#svgFontName") format('svg'); /* Legacy iOS */
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+// Полужирный шрифт
+@font-face {
+  font-family: "Inter-SemiBold"; 
+  src: url("/assets/fonts/Inter/Inter-SemiBold.eot"); 
+  src: url("/assets/fonts/Inter/Inter-SemiBold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/assets/fonts/Inter/Inter-SemiBold.woff") format("woff"), /* Modern Browsers */
+  url("/assets/fonts/Inter/Inter-SemiBold.ttf") format("truetype"), /* Safari, Android, iOS */
+  url("/assets/fonts/Inter/Inter-SemiBold.svg#svgFontName") format('svg'); /* Legacy iOS */
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+// Жирный шрифт
+@font-face {
+  font-family: "Inter-Bold"; 
+  src: url("/assets/fonts/Inter/Inter-Bold.eot"); 
+  src: url("/assets/fonts/Inter/Inter-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/assets/fonts/Inter/Inter-Bold.woff") format("woff"), /* Modern Browsers */
+  url("/assets/fonts/Inter/Inter-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+  url("/assets/fonts/Inter/Inter-Bold.svg#svgFontName") format('svg'); /* Legacy iOS */
+  font-style: normal; 
+  font-weight: normal; 
+}
+
+
+// Миксин конфигурирования шрифтов
+@mixin font-config($_weight, $_size, $_height, $_family) {
+  font-family: $_family;
+  font-style: normal;
+  font-weight: $_weight;
+  font-size: $_size;
+  line-height: $_height;
+  color: $_main_color__enabled;
+  background-color: $_main_color__background;
+}

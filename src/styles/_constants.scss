@@ -1,0 +1,66 @@
+// Фильтры для вектора:
+$_filter_white: brightness(0) invert(1);
+$_filter_blue: sepia(100%) hue-rotate(190deg) saturate(900%);
+$_filter_dark_blue: brightness(0) saturate(100%);
+
+// Основные цвета тона и фона
+$_main_color__highlighted: #3B82F6;
+$_main_color__enabled: #1E293B;
+$_main_color__disabled: #64748B;
+$_main_color__background: #FFFFFF;
+$_main_color__background_invisible: rgba(0, 0, 0, 0);
+$_color_danger: #EF4444;
+
+$_border_color__enabled: $_main_color__enabled;
+$_border_color__disabled: #CBD5E1;
+$_border_color__selected: $_main_color__highlighted;
+
+$_divider_color: #E2E8F0;
+
+// Цвета ховера кнопок
+$_button_hover_background: #49648f;
+$_button_hover_svg_filter: $_filter_white;
+
+// Меню-панель категорий
+$_category_panel_hover_background: #F5F5F5;
+
+// Основные кнопки
+$_button_color: #FFFFFF;
+$_button_background_color: $_main_color__highlighted;
+
+// Цвет гиперссылки
+$_hyper_link_color: #4609fb;
+$_hyper_link_color_hover: #0EA5E9;
+
+// Размер контейнера
+$_container-main_max-width: 1326px; //1296 + 15 + 15 - padding left right;
+
+// Размеры карточки
+$_card-width_min: 200px; 
+$_card-width: 306px; // 306 = (1296 - 3*24)/4
+$_card_height: 336px;
+
+// Зазоры главной таблицы
+$_main_row_gap: 32px;
+$_main_column_gap: 24px;
+
+// Инпуты: общие стили
+$_input_border__disabled: 1px solid $_border_color__disabled;    // Бордюр
+$_input_border__enabled: 1px solid $_border_color__enabled;    // Бордюр
+
+// Миксин флекс-бокса
+@mixin flexbox_d_j_a($_direction, $_justify, $_align) {
+  display: flex;
+  flex-direction: $_direction;
+  justify-content: $_justify;
+  align-items: $_align;
+}
+
+// Базовый контейнер страницы
+@mixin base-container {
+  max-width: $_container-main_max-width;
+  width: 100%; // для IE и т.п.: 100% чтобы он растягивался по max-width
+  padding: 0 15px; // "Чтобы текст не прилипал к экрану"
+  margin: 0 auto; // отцентровать
+  font-size: 14px;
+}
