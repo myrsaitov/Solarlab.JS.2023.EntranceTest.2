@@ -1,8 +1,12 @@
-<div class="options-container">
+<div class="page__list__item">
   <p-checkbox
     [binary]="true"
     label="Запомнить меня"
     formControlName="isRememberedMe">
   </p-checkbox>
-  <a [routerLink]="['#']">Забыли пароль?</a>
+  <input
+    pInputText 
+    type="text"
+    placeholder="Номер телефона"
+    formControlName="phone_number"/>
 </div>
