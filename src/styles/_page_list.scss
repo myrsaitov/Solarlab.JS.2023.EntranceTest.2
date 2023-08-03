@@ -6,13 +6,20 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: red;
+  margin: 0 auto;  // отцентровать основной контейнер
 }
 
 .page__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   &__item {
     padding: 10px;
     flex-direction: row;
     justify-content: flex-start;
+    gap: 20px;
     align-items: center;
     border-color: _border_color__enabled;
     border-radius: 4px;

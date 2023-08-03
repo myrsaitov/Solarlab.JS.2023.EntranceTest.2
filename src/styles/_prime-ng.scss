@@ -64,6 +64,7 @@
 
 // Общие свойства инпутов
 .p-inputtext {
+  flex-grow: 1;  // чтобы растягивался
   border: $_input_border__disabled;
   border-radius: 4px;
   color: $_main_color__disabled;
@@ -72,12 +73,6 @@
   @include font-config(400, 16px, 24px, "Inter-Normal");
   height: 48px;
   padding: 12px;
-  // "Инпут" высотой 40px = 8px + 24px + 8px
-  &_height-40px {
-    @include font-config(400, 16px, 24px, "Inter-Normal");
-    height: 40px;
-    padding: 8px 12px;
-  }
   &:focus { 
     outline: none;
     color: $_main_color__enabled;

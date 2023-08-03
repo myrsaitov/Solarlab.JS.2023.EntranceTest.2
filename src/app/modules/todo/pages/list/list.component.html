@@ -1,12 +1,13 @@
-<div class="page__list__item">
-  <p-checkbox
-    [binary]="true"
-    label="Запомнить меня"
-    formControlName="isRememberedMe">
-  </p-checkbox>
-  <input
-    pInputText 
-    type="text"
-    placeholder="Номер телефона"
-    formControlName="phone_number"/>
+<div class="page__list">
+  <div class="page__list__item">
+    <p-checkbox
+      [binary]="true"
+      formControlName="isDone">
+    </p-checkbox>
+    <input
+      pInputText 
+      type="text"
+      placeholder="Напишите, что нужно сделать"
+      formControlName="todo_body"/>
+  </div>
 </div>

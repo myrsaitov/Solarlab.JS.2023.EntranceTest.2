@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CheckboxModule } from 'primeng/checkbox';
 import { TodoRoutingModule } from './todo-routing.module';
 import { ListComponent } from './pages/list/list.component';
-
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -12,6 +12,7 @@ import { ListComponent } from './pages/list/list.component';
   imports: [
     CommonModule,
     CheckboxModule,
+    InputTextModule,
     TodoRoutingModule
   ]
 })
