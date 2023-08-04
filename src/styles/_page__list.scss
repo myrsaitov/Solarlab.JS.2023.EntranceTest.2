@@ -6,7 +6,6 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: red;
   margin: 0 auto;  // отцентровать основной контейнер
 }
 
@@ -15,13 +14,23 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  column-gap: 10px;
+  width: 100%;
   &__item {
-    padding: 10px;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: 20px;
-    align-items: center;
-    border-color: _border_color__enabled;
-    border-radius: 4px;
+    & form {
+      margin-top: 4px;
+      padding: 2px 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+      border: 1px solid $_border_color__enabled !important;
+      border-radius: 4px;
+      & input {
+        flex-grow: 1;
+      }
+    }
   }
 }

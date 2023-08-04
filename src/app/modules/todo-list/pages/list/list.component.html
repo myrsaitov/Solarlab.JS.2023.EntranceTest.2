@@ -1,4 +1,6 @@
-<app-todo-item *ngFor="let item of todoService.items"
-  [text]="item.text"
-  [isDone]="item.isDone"
-  ></app-todo-item>
+<ng-container *ngFor="let item of todoService.items">
+  <app-todo-item *ngIf="!item.isDeleted"
+    [text]="item.text"
+    [isDone]="item.isDone"
+    ></app-todo-item>
+</ng-container>

@@ -18,6 +18,13 @@ export class TodoService {
     }
   }
 
+  deleteItem(id: string){
+    let item = this.items?.find( x => x.id === id);
+    if(item){
+      item.isDeleted = true;
+    }
+  }
+
   loadItems(){
     this.items.push(
       {

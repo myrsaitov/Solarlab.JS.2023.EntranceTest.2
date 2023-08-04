@@ -6,6 +6,7 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     InputTextModule,
     FormsModule,
     ReactiveFormsModule,
+    ButtonModule,
   ]
 })
 export class TodoListModule { }
