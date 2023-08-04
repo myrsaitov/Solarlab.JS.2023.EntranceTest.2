@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <div class="page__list">
+    <div class="page__list__item">
+      <p-checkbox
+        [binary]="true"
+        formControlName="isDone">
+      </p-checkbox>
+      <input
+        pInputText 
+        type="text"
+        placeholder="Напишите, что нужно сделать"
+        formControlName="text"/>
+    </div>
+  </div>
+</form>

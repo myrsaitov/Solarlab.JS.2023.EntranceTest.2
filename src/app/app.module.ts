@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoModule } from './modules/todo/todo.module';
 import { CheckboxModule } from 'primeng/checkbox';
+import { TodoListModule } from './modules/todo-list/todo-list.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,8 +15,8 @@ import { CheckboxModule } from 'primeng/checkbox';
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
-    TodoModule,
-    CheckboxModule
+    CheckboxModule,
+    TodoListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

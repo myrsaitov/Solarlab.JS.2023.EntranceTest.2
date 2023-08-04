@@ -1,0 +1,4 @@
+<app-todo-item *ngFor="let item of todoService.items"
+  [text]="item.text"
+  [isDone]="item.isDone"
+  ></app-todo-item>

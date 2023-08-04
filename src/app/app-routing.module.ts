@@ -7,7 +7,7 @@ const routes: Routes = [
     pathMatch: 'full',  // без этого не будут работать другие маршруты!
     title: 'Список дел',
     loadChildren: () =>
-      import('./modules/todo/todo.module').then(m => m.TodoModule)
+      import('./modules/todo-list/todo-list.module').then(m => m.TodoListModule)
   },
 ];
 

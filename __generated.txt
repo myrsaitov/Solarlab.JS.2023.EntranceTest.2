@@ -2,5 +2,9 @@
 # Страницы и их внутренние компоненты
 ##############################################################
 
-  ng generate module modules/todo --module=app --routing
-    ng generate component modules/todo/pages/list --module=modules/todo
+  ng generate module modules/todo-list --module=app --routing
+    ng generate component modules/todo-list/pages/list --module=modules/todo-list
+    ng generate component modules/todo-list/components/todo-item --module modules/todo-list
+    ng generate interface interfaces/todo-item/i-todo-item
+
+    ng generate service services/todo/todo
