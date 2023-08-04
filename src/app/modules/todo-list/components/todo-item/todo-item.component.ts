@@ -24,4 +24,12 @@ export class TodoItemComponent implements OnInit{
     });
   }
 
+  changeText(event: Event) {
+
+    //console.log(event);
+    console.log(this.form.value);
+    const { text, isDone } = this.form.value;
+    this.todoService.changeText(this.id, text);
+  }
+
 }

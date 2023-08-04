@@ -1,0 +1,10 @@
+main {
+  max-width: 1326px; //1296 + 15 + 15 - padding left right;
+  width: 100%; // для IE и т.п.: 100% чтобы он растягивался по max-width
+  padding: 0 15px; // "Чтобы текст не прилипал к экрану"
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;  // отцентровать основной контейнер
+}

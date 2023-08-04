@@ -1,18 +1,34 @@
 <form [formGroup]="form">
-  <p-checkbox
-    (onChange)="todoService.toggleItem(id)"
-    [binary]="true"
-    formControlName="isDone">
-  </p-checkbox>
-  <input
-    pInputText 
-    type="text"
-    placeholder="Напишите, что нужно сделать"
-    formControlName="text"/>
-  <button
-    pButton
-    class="button"
-    icon="pi pi-ban"
-    (onClick)="todoService.deleteItem(id)">
-  </button>
+  <div class="form-items">
+    <p-checkbox
+      (onChange)="todoService.toggleItem(id)"
+      [binary]="true"
+      formControlName="isDone">
+    </p-checkbox>
+    <input
+      pInputText 
+      type="text"
+      placeholder="Напишите, что нужно сделать"
+      (onChange)="changeText($event)"
+      (keydown.enter)="changeText($event)"
+      formControlName="text"/>
+    <button
+      pButton
+      class="button"
+      icon="pi pi-arrow-up"
+      (onClick)="todoService.moveUpItem(id)">
+    </button>
+    <button
+      pButton
+      class="button"
+      icon="pi pi-arrow-down"
+      (onClick)="todoService.moveDownItem(id)">
+    </button>
+    <button
+      pButton
+      class="button"
+      icon="pi pi-trash"
+      (onClick)="todoService.deleteItem(id)">
+    </button>
+  </div>
 </form>

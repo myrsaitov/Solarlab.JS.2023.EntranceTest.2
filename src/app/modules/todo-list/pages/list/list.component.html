@@ -1,5 +1,6 @@
 <ng-container *ngFor="let item of todoService.items">
   <app-todo-item *ngIf="!item.isDeleted"
+    [id]="item.id"
     [text]="item.text"
     [isDone]="item.isDone"
     ></app-todo-item>

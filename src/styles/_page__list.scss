@@ -1,14 +1,3 @@
-main {
-  max-width: 1326px; //1296 + 15 + 15 - padding left right;
-  width: 100%; // для IE и т.п.: 100% чтобы он растягивался по max-width
-  padding: 0 15px; // "Чтобы текст не прилипал к экрану"
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0 auto;  // отцентровать основной контейнер
-}
-
 .page__list {
   display: flex;
   flex-direction: column;
@@ -16,17 +5,19 @@ main {
   align-items: center;
   column-gap: 10px;
   width: 100%;
+  gap: 6px;
   &__item {
-    & form {
-      margin-top: 4px;
-      padding: 2px 12px;
+    width: 100%; 
+    & .form-items {
+      overflow: hidden;
+      padding: 8px 12px;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
       width: 100%;
       gap: 10px;
-      border: 1px solid $_border_color__enabled !important;
+      border: 1px solid $_border_color__disabled !important;
       border-radius: 4px;
       & input {
         flex-grow: 1;
