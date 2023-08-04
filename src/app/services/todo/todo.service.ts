@@ -61,6 +61,7 @@ export class TodoService {
   }
 
   deleteItem(id: string){
+    console.log('deleteItem()');
     let item = this.items?.find( x => x.id === id);
     if(item){
       item.isDeleted = true;

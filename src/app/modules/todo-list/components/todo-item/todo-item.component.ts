@@ -24,6 +24,7 @@ export class TodoItemComponent implements OnInit{
     });
   }
 
+
   changeText(event: Event) {
 
     //console.log(event);
