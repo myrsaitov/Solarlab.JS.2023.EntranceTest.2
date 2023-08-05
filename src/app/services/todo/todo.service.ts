@@ -77,8 +77,8 @@ export class TodoService {
   }
 
   loadItems(){
-    //this.items = JSON.parse(localStorage.getItem("data") || this.fakeTodoList);
-    this.items = JSON.parse(this.fakeTodoList);
+    this.items = JSON.parse(localStorage.getItem("data") || this.fakeTodoList);
+    //this.items = JSON.parse(this.fakeTodoList);
     console.log('loadItems()');
     console.log(this.items);
   }

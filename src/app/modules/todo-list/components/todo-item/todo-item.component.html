@@ -9,12 +9,11 @@
       pInputText 
       type="text"
       placeholder="Напишите, что нужно сделать"
-      (onChange)="changeText($event)"
-      (keydown.enter)="changeText($event)"
+      (input)="changeText()"
       formControlName="text"/>
     <p-button 
       icon="pi pi-arrow-up"
-      styleClass="p-button-info"
+      styleClass="p-button-info" 
       (onClick)="todoService.moveUpItem(id)">
     </p-button>
     <p-button 
