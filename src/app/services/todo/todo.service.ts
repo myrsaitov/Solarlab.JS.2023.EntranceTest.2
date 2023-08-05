@@ -32,16 +32,27 @@ export class TodoService {
 
   constructor() { }
 
+
+
   moveUpItem(id: string){
     console.log('moveUpItem()');
-    let item = this.items?.find( x => x.id === id);
-    // TODO
+    const index = this.items?.findIndex( x => x.id === id);
+    console.log(index)
+    if (index > 0) {
+      this.items.splice(index - 1, 0, this.items.splice(index, 1)[0])
+      this.saveItems();
+    }
+
   }
 
   moveDownItem(id: string){
     console.log('moveDownItem()');
-    let item = this.items?.find( x => x.id === id);
-    // TODO
+    const index = this.items?.findIndex( x => x.id === id);
+    console.log(index)
+    if (index < this.items.length) {
+      this.items.splice(index + 1, 0, this.items.splice(index, 1)[0])
+      this.saveItems();
+    }
   }
 
   toggleItem(id: string){
