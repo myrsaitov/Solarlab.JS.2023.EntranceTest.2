@@ -9,28 +9,6 @@ export class TodoService {
 
   items:ITodoItem[] = [];
 
-  fakeTodoList: string = JSON.stringify([
-
-    {
-      'id': Guid.create().toString(),
-      'text': "Сделать тестовое задание",
-      'isDone': true,
-      'isDeleted': false,
-    },
-    {
-      'id': Guid.create().toString(),
-      'text': "Сделать тестовое задание 2",
-      'isDone': false,
-      'isDeleted': false,
-    },
-    {
-      'id': Guid.create().toString(),
-      'text': "Сделать тестовое задание 3",
-      'isDone': false,
-      'isDeleted': false,
-    }
-  ])
-
   constructor() { }
 
 
@@ -76,8 +54,7 @@ export class TodoService {
     let newElement:ITodoItem = {
       'id': Guid.create().toString(),
       'text': "Введите описание дела",
-      'isDone': false,
-      'isDeleted': false,
+      'isDone': false
     }
     if (index < this.items.length) {
       this.items.splice(index + 1, 0, newElement)
@@ -100,16 +77,40 @@ export class TodoService {
 
   deleteItem(id: string){
     console.log('deleteItem()');
-    let item = this.items?.find(x => x.id === id);
-    if(item){
-      item.isDeleted = true;
-      this.saveItems();
+    let index = this.items?.findIndex(x => x.id === id);
+    if (index < 0) {
+      console.error(index)
+      return
     }
+
+    this.items.splice(index, 1)
+
+    if (this.items.length == 0) {
+      this.items.push(
+        {
+          'id': Guid.create().toString(),
+          'text': "Введите описание дела",
+          'isDone': false
+        }
+      );
+    }
+
+    this.saveItems();
+
   }
 
   loadItems(){
-    //this.items = JSON.parse(localStorage.getItem("data") || this.fakeTodoList);
-    this.items = JSON.parse(this.fakeTodoList);
+
+    let initTodoList: string = JSON.stringify([
+      {
+        'id': Guid.create().toString(),
+        'text': "Введите описание дела",
+        'isDone': false
+      }
+    ])
+
+    this.items = JSON.parse(localStorage.getItem("data") || initTodoList);
+    //this.items = JSON.parse(this.initTodoList);
     console.log('loadItems()');
     console.log(this.items);
   }
