@@ -11,7 +11,7 @@ import { ButtonModule } from 'primeng/button';
 @NgModule({
   declarations: [
     ListComponent,
-    TodoItemComponent
+    TodoItemComponent    
   ],
   imports: [
     CommonModule,
