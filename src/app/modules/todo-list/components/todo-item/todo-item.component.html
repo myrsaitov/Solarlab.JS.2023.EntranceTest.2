@@ -12,23 +12,25 @@
       (onChange)="changeText($event)"
       (keydown.enter)="changeText($event)"
       formControlName="text"/>
-    <button
-      pButton
-      class="button"
+    <p-button 
       icon="pi pi-arrow-up"
+      styleClass="p-button-info"
       (onClick)="todoService.moveUpItem(id)">
-    </button>
-    <button
-      pButton
-      class="button"
+    </p-button>
+    <p-button 
       icon="pi pi-arrow-down"
+      styleClass="p-button-info"
       (onClick)="todoService.moveDownItem(id)">
-    </button>
-    <button
-      pButton
-      class="button"
-      icon="pi pi-trash"
+    </p-button>
+    <p-button 
+      icon="pi pi-times"
+      styleClass="p-button-danger"
       (onClick)="todoService.deleteItem(id)">
-    </button>
+    </p-button>
+    <p-button 
+      icon="pi pi-plus"
+      styleClass="p-button-success"
+      (onClick)="todoService.addItem(id)">
+    </p-button>
   </div>
 </form>

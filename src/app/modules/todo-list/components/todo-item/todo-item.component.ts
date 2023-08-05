@@ -33,4 +33,8 @@ export class TodoItemComponent implements OnInit{
     this.todoService.changeText(this.id, text);
   }
 
+  test(){
+    console.log("test");
+  }
+
 }

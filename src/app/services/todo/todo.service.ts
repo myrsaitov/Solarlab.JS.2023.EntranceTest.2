@@ -33,11 +33,13 @@ export class TodoService {
   constructor() { }
 
   moveUpItem(id: string){
+    console.log('moveUpItem()');
     let item = this.items?.find( x => x.id === id);
     // TODO
   }
 
   moveDownItem(id: string){
+    console.log('moveDownItem()');
     let item = this.items?.find( x => x.id === id);
     // TODO
   }
@@ -49,6 +51,11 @@ export class TodoService {
       item.isDone = !item.isDone;
       this.saveItems();
     }
+  }
+
+  addItem(id: string){
+    console.log('addItem()');
+//TODO
   }
 
   changeText(id: string, text: string){
@@ -70,7 +77,8 @@ export class TodoService {
   }
 
   loadItems(){
-    this.items = JSON.parse(localStorage.getItem("data") || this.fakeTodoList);
+    //this.items = JSON.parse(localStorage.getItem("data") || this.fakeTodoList);
+    this.items = JSON.parse(this.fakeTodoList);
     console.log('loadItems()');
     console.log(this.items);
   }

@@ -98,29 +98,7 @@
 
 // Кнопка
 .p-button {
-  @include flexbox_d_j_a(row, center, center);
-  background: $_button_background_color !important;
-  border: none !important;
   border-radius: 4px;
-  padding: 0 12px 0 12px;
-  & .p-button-label {
-    @include font-config(500, 14px, 20px, "Inter-Medium");
-    flex: 0 0 auto;
-    color:$_button_color !important;
-    background-color: rgba(0, 0, 0, 0) !important;
-  }
-  &:hover {
-    background-color: $_button_hover_background !important;
-  }
-  // Чтобы не появлялся бордюр темы PrimeNG
-  &:enabled:focus {
-    outline: none;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    color: $_main_color__enabled;
-    border: $_input_border__enabled;
-  }
 }
 
 // Сортировка
